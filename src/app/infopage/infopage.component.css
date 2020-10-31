@@ -1,0 +1,25 @@
+.img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 200px;
+}
+
+.bg-img {
+    background-image: url("D:\MCA\Angular\website\src\assets\img\bg3.jpeg");
+    height: 753px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.form-inline{
+    max-width: 600px;
+    width: auto;
+    margin: auto;
+}
+
+.form-control{
+    width: 400px;
+}

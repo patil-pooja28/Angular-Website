@@ -1,0 +1,43 @@
+.img-responsive {
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 200px;
+}
+
+.box{
+    width: 900px;
+    height: 400px;
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 140px;
+    text-align: center;
+}
+
+.card{
+    background: rgba(0,0,0,0.4);
+    padding: 40px;
+    color: white;
+    margin-top: 140px;
+    margin: 0 auto;
+}
+
+.form-inline{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control{
+    width: 400px;
+}
+
+.bg-img {
+    background-image: url("D:\MCA\Angular\website\src\assets\img\bg2.webp");
+    height: 753px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}

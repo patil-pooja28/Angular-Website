@@ -1,0 +1,42 @@
+<div class="bg-img">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-grey">
+    <a class="navbar-brand"><img class="img-responsive" src="assets\img\logo1.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/home"><b>Home</b> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/infopage"><b>Product Search</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus"><b>About Us</b></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="box">
+    <br>
+    <h1 style="font-size:2.5vw;">Find your product and compare prices from different websites.</h1>
+    <br><br>
+
+    <form class="form-inline" style="text-align: center;">
+        <div class="form-group mx-sm-3 mb-2">
+          <input class="form-control" type="search" placeholder="Enter product name" aria-label="Search">
+        </div>
+        <button type="submit" class="btn btn-outline-light mb-2" routerLink="/infopage"><b>Search</b></button>
+    </form>
+
+    <br>
+    <h4 style="font-size:1.5vw;">We compare multiple websites at once.</h4>
+  </div> 
+  
+</div>
+
+<router-outlet></router-outlet>
