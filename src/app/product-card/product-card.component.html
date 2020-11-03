@@ -1,0 +1,25 @@
+<!-- <p>product-card works!</p> -->
+
+<div class="row">
+    <div *ngIf="product.title" class="card" style="width: 17rem;">
+        <div class="product-grid3">
+            <div class="product-image3">
+                <img class="pic-1" *ngIf="imageUrl;else loading" alt="{{ product.title }}" [src]="imageUrl">
+            </div>
+            <div class="product-content">
+            <h3 class="title"><b>{{ product.title }}</b></h3>
+                <div class="price">
+                    <div class="row">
+                        <div class="col">
+                            <b>{{ product.price | currency:'INR'}}</b>
+                        </div>
+                        <div *ngIf="isAdmin" class="col">
+                            <a [routerLink]="['/admin/products/', product.id]" class="fas fa-edit" style="color:rgb(230, 133, 22)"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
