@@ -37,7 +37,7 @@
         <div>
           <div class="row mx-auto">
            <div *ngFor="let p of datas; let i = index">
-              <div ng-if="$index % 3 == 0"></div>
+              <!-- <div *ngIf="$index % 3 == 0"></div> -->
               <div class="col-sm-4 col-xs-12 mb-4">
                 <app-product-card [product]=p></app-product-card>
               </div>

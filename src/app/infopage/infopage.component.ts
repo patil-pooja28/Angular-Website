@@ -17,7 +17,7 @@ export class InfopageComponent implements OnInit {
     this.httpClient.post('http://127.0.0.1:5000/search', key).subscribe(data => {
       //this.serverData = data as JSON;
       console.log(data);
-      this.datas = data;
+      this.datas = data["Response"];
     });
 
   }
