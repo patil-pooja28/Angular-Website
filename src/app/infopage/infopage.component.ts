@@ -9,7 +9,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InfopageComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, private router: Router) { }
+  constructor(private httpClient: HttpClient, private router: Router) {
+    const navigation = this.router.getCurrentNavigation();
+    const key = navigation.extras.state as { keyword: string };
+    console.log(key);
+    this.httpClient.post('http://127.0.0.1:5000/search', key).subscribe(data => {
+      //this.serverData = data as JSON;
+      console.log(data);
+    });
+
+  }
 
 
 
@@ -76,12 +85,8 @@ export class InfopageComponent implements OnInit {
   }]
 
   ngOnInit(): void {
-    // const navigation = this.router.getCurrentNavigation();
-    // const key = navigation.extras.state;
-    // this.httpClient.post('http://127.0.0.1:5000/search', key).subscribe(data => {
-    //   //this.serverData = data as JSON;
-    //   console.log(data);
-    // })
+
+
   }
 
 }

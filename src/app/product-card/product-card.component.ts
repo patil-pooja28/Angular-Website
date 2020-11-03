@@ -12,7 +12,7 @@ export class ProductCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.product);
+    // console.log(this.product);
   }
 
 }

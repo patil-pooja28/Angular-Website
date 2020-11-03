@@ -1,6 +1,5 @@
 import { NavigationExtras, Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,9 +15,10 @@ export class HomeComponent implements OnInit {
   nextPage(key) {
     const navigationExtras: NavigationExtras = {
       state: {
-        key: key
+        keyword: this.keyword
       }
-    }
+    };
+    // console.log(this.keyword);
     this.route.navigate(['/infopage'], navigationExtras)
     
   }
