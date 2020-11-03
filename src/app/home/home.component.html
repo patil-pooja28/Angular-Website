@@ -26,11 +26,16 @@
     <h1 style="font-size:2.5vw;">Find your product and compare prices from different websites.</h1>
     <br><br>
 
-    <form class="form-inline" style="text-align: center;">
+    <form class="form-inline" style="text-align: center;" #f = "ngForm" (ngSubmit)="nextPage(f.value)">
+
         <div class="form-group mx-sm-3 mb-2">
-          <input class="form-control" type="search" placeholder="Enter product name" aria-label="Search">
+          <input #keywords="ngModel" [(ngModel)]="keyword" name="keyword"
+          class="form-control" type="search" placeholder="Enter product name" aria-label="Search">
         </div>
-        <button type="submit" class="btn btn-outline-light mb-2" routerLink="/infopage"><b>Search</b></button>
+        <button type="submit" class="btn btn-outline-light mb-2"><b>Search</b></button>
+
+    
+
     </form>
 
     <br>
