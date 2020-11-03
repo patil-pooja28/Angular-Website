@@ -1,3 +1,4 @@
+import { NavigationExtras, Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -10,21 +11,21 @@ export class HomeComponent implements OnInit {
   employeeData: JSON;
   keyword;
 
-  constructor(private httpClient: HttpClient) { }
-  
-  nextPage(key) {
-    console.log(key)
-    this.httpClient.post('http://127.0.0.1:5000/search',key).subscribe(data => {
-      //this.serverData = data as JSON;
-      console.log(data);
-    })
-  }
-  
+  constructor(private route: Router) { }
 
-  ngOnInit(): void {
+  nextPage(key) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        key: key
+      }
+    }
+    this.route.navigate(['/infopage'], navigationExtras)
     
   }
 
+
+  ngOnInit(): void {
+  }
 
 
 }
