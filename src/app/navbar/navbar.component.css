@@ -30,3 +30,7 @@
 .form-control{
     width: 400px;
 }
+
+ul:hover {
+    cursor: pointer;
+}

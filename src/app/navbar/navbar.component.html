@@ -1,60 +1,64 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-grey navbar-fixed">
-    <a class="navbar-brand" routerLink="/home"><img class="img-responsive" src="assets\img\logo1.png"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <a class="navbar-brand" routerLink="/home"><img class="img-responsive" src="assets\img\logo1.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Mobiles </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/mobile" routerLinkActive="active">Mobiles</a>
-            <a class="dropdown-item" routerLink="/tablet" routerLinkActive="active">Tablet</a>
-            <a class="dropdown-item" routerLink="/powerbank" routerLinkActive="active">Power Banks</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/mobileacc" routerLinkActive="active">Mobile Accessories</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           TV & Computer </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/tv" routerLinkActive="active">TV sets</a>
-            <a class="dropdown-item" routerLink="/laptop" routerLinkActive="active">Laptop</a>
-            <a class="dropdown-item" routerLink="/pd" routerLinkActive="active">Pendrives & storage</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/compacc" routerLinkActive="active">Computer Accessories</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Kitchen Appliances</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/refrigator" routerLinkActive="active">Refrigator</a>
-            <a class="dropdown-item" routerLink="/microwave" routerLinkActive="active">Microwave</a>
-            <a class="dropdown-item" routerLink="/dishwasher" routerLinkActive="active">Dishwasher</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" routerLink="/other" routerLinkActive="active">Other..</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Audio & Video</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" routerLink="/speaker" routerLinkActive="active">Speakers</a>
-            <a class="dropdown-item" routerLink="/headphone" routerLinkActive="active">Headphones</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0" #f = "ngForm" (ngSubmit)="nextPage(f.value)">
-        <input #keywords="ngModel" [(ngModel)]="keyword" name="keyword"
-        class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Mobiles </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/mobile" routerLinkActive="active">Mobiles</a>
+          <a class="dropdown-item" routerLink="/tablet" routerLinkActive="active">Tablet</a>
+          <a class="dropdown-item" routerLink="/powerbank" routerLinkActive="active">Power Banks</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/mobileacc" routerLinkActive="active">Mobile Accessories</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          TV & Computer </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/tv" routerLinkActive="active">TV sets</a>
+          <a class="dropdown-item" routerLink="/laptop" routerLinkActive="active">Laptop</a>
+          <a class="dropdown-item" routerLink="/pd" routerLinkActive="active">Pendrives & storage</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/compacc" routerLinkActive="active">Computer Accessories</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Kitchen Appliances</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/refrigator" routerLinkActive="active">Refrigator</a>
+          <a class="dropdown-item" routerLink="/microwave" routerLinkActive="active">Microwave</a>
+          <a class="dropdown-item" routerLink="/dishwasher" routerLinkActive="active">Dishwasher</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="/other" routerLinkActive="active">Other..</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Audio & Video</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="/speaker" routerLinkActive="active">Speakers</a>
+          <a class="dropdown-item" routerLink="/headphone" routerLinkActive="active">Headphones</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" #f="ngForm" (ngSubmit)="nextPage(f.value)">
+      <input #keywords="ngModel" [(ngModel)]="keyword" name="keyword" class="form-control mr-sm-2" type="search"
+        placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
 
-  </nav>
-  <br><br>
+</nav>
+<br><br>
