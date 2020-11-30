@@ -1,15 +1,19 @@
-<div class="card" style="width: 15rem;"> 
-  <div class="img3">
-    <img class="pic-1" alt="{{ product.Name }}" [src]="product.ImageSrc">
-  </div>
-   
-    <div class="card-body">
-      <h6 class="card-title">{{ product.Name | slice:0:18}}...</h6>
-      <h5><b>{{ product.Price}}</b></h5>
-      <h6>Discount: {{ product.Discount}}</h6>
-      <h6>Website: {{ product.Website}}</h6>
-      <a target = "blank" href= "{{product.NavLink}}" class="btn btn-primary">View Deal></a>
+<div class="card" style="width: 15rem;">
+    <div class="img3">
+        <img class="pic-1" alt="{{ product.Name }}" [src]="product.ImageSrc">
     </div>
-  </div>
 
+    <div class="card-body">
+        <h6 class="card-title">{{ product.Name | slice:0:18}}...</h6>
 
+        <div *ngIf="product.Website == 'PaytmMall'">
+            <h5><b>₹{{ product.Price}}</b></h5>
+        </div>
+        <div *ngIf="product.Website != 'PaytmMall'">
+            <h5><b>{{ product.Price}}</b></h5>
+        </div>
+        <h6>Discount: {{ product.Discount}}</h6>
+        <h6>Website: {{ product.Website}}</h6>
+        <a target="blank" href="{{product.NavLink}}" class="btn btn-primary">View Deal></a>
+    </div>
+</div>
