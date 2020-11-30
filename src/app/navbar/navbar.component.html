@@ -1,11 +1,4 @@
-<ng-template #loading>
-  <loading-spinner></loading-spinner>
-</ng-template>
-
-<div class="bg-img">
-
-  <app-navbar></app-navbar>
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-grey navbar-fixed">
+<nav class="navbar navbar-expand-lg navbar-light bg-grey navbar-fixed">
     <a class="navbar-brand" routerLink="/home"><img class="img-responsive" src="assets\img\logo1.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,28 +57,4 @@
     </div>
 
   </nav>
-  <br><br> -->
-
-  <!-- <div class="container-fluid mt-4" *ngIf = "data;else loading"> -->
-    <div class="container-fluid mt-4" *ngIf = "datas">
-    <div class="card border-0 shadow my-2">
-      <div class="card-body p-5">
-        
-        <div>
-          <div class="row mx-auto">
-           <div *ngFor="let p of datas; let i = index">
-              <!-- <div *ngIf="$index % 3 == 0"></div> -->
-              <div class="col-sm-4 col-xs-12 mb-4">
-                <app-product-card [product]=p></app-product-card>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-
- 
-
-</div>
+  <br><br>

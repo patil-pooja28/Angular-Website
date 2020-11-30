@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { NavigationExtras, Router, RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,21 +9,34 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InfopageComponent implements OnInit {
 
-  datas = null;
-  constructor(private httpClient: HttpClient, private router: Router) {
-    const navigation = this.router.getCurrentNavigation();
-    const key = navigation.extras.state as { keyword: string };
-    console.log(key);
-    this.httpClient.post('http://127.0.0.1:5000/search', key).subscribe(data => {
-      //this.serverData = data as JSON;
-      console.log(data);
-      this.datas = data["Response"];
-    });
+  // datas = null;
+  // constructor(private httpClient: HttpClient, private router: Router) {
+  //   const navigation = this.router.getCurrentNavigation();
+  //   const key = navigation.extras.state as { keyword: string };
+  //   console.log(key);
+  //   this.httpClient.post('http://127.0.0.1:5000/search', key).subscribe(data => {
+  //     //this.serverData = data as JSON;
+  //     console.log(data);
+  //     this.datas = data["Response"];
+  //   });
 
+  // }
+  serverData: JSON;
+  employeeData: JSON;
+  keyword;
+
+  constructor(private route: Router) { }
+
+  nextPage(key) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        keyword: this.keyword
+      }
+    };
+    // console.log(this.keyword);
+    this.route.navigate(['/infopage'], navigationExtras)
+    
   }
-
-
-  /*
     datas = [{
       "Name": "Asus E402YA-GA067T Laptop (AMD Dual Core E2 7015 @1.5GH", "Price": "\u20b921290", "Discount":
         "14% Off", "ImageSrc": "https://cdn.shopclues.com/images1/thumbnails/111495/200/200/151237966-111495230-1603117184.jpg",
@@ -85,7 +98,7 @@ export class InfopageComponent implements OnInit {
       "ImageSrc": "https://cdn.shopclues.com/images1/thumbnails/111885/200/200/151358307-111885870-1604228143.jpg", "NavLink":
         "https://www.shopclues.com/lenovo-slim-3-15iml05-81wb00fain-core-i5-10th-gen-10210u-8gb-ram-1tb-hdd256gb-ssd-2gb-15.6-windows-10-homems-office-151358307.html"
     }]
-  */
+  
   ngOnInit(): void {
 
 

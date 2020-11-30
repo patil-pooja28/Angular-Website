@@ -1,29 +1,13 @@
-<!-- <div class="row">
-    <div class="card" style="width: 19rem;">
-        <div class="product-grid3">
-            <div class="product-image3">
-                <img class="pic-1" alt="{{ product.Name }}" [src]="product.ImageSrc">
-            </div>
-            <div class="product-content">
-            <h6 class="title"><b>{{ product.Name }}</b></h6>
-                <div class="price">
-                    <div class="row">
-                        <div class="col">
-                            <b>{{ product.Price}}</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<div class="card" style="width: 15rem;">  
+<div class="card" style="width: 15rem;"> 
+  <div class="img3">
     <img class="pic-1" alt="{{ product.Name }}" [src]="product.ImageSrc">
+  </div>
+   
     <div class="card-body">
-      <h6 class="card-title">{{ product.Name }}</h6>
+      <h6 class="card-title">{{ product.Name | slice:0:18}}...</h6>
       <h5><b>{{ product.Price}}</b></h5>
       <h6>Discount: {{ product.Discount}}</h6>
+      <h6>Website: {{ product.Website}}</h6>
       <a target = "blank" href= "{{product.NavLink}}" class="btn btn-primary">View Deal></a>
     </div>
   </div>
